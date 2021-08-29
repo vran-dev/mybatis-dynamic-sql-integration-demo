@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id "org.flywaydb.flyway" version "7.14.0"
 }
 
 allprojects {
@@ -36,7 +37,6 @@ allprojects {
             implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.0'
             implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
             implementation group: 'org.flywaydb', name: 'flyway-core', version: '7.14.0'
-
         }
 
     }

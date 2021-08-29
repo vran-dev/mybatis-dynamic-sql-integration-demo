@@ -24,6 +24,7 @@ dependencies {
     api group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql'
     api group: 'org.mybatis', name: 'mybatis'
     implementation group: 'org.mybatis.generator', name: 'mybatis-generator-core'
+    implementation group: 'org.flywaydb', name: 'flyway-core'
 
     // datasource
     api group: 'com.zaxxer', name: 'HikariCP'
