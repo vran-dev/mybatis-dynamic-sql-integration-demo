@@ -1,0 +1,12 @@
+group 'cc.cc1234.api'
+
+dependencies {
+    implementation project(":core")
+    implementation project(":dao")
+    // spring boot
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-validation'
+    implementation group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter'
+
+}

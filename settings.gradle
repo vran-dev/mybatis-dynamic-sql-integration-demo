@@ -1,0 +1,5 @@
+rootProject.name = 'dynamic-mybatis-demo'
+include 'api'
+include 'core'
+include 'dao'
+

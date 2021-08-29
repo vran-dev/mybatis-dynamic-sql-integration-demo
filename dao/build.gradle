@@ -1,0 +1,43 @@
+import org.mybatis.generator.api.MyBatisGenerator
+import org.mybatis.generator.config.xml.ConfigurationParser
+import org.mybatis.generator.internal.DefaultShellCallback
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0'
+        classpath group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
+    }
+}
+
+plugins {
+    id 'java-library'
+}
+
+dependencies {
+    api project(":core")
+
+    // mybatis
+    api group: 'org.mybatis.spring.boot', name: 'mybatis-spring-boot-starter'
+    api group: 'org.mybatis.dynamic-sql', name: 'mybatis-dynamic-sql'
+    api group: 'org.mybatis', name: 'mybatis'
+    implementation group: 'org.mybatis.generator', name: 'mybatis-generator-core'
+
+    // datasource
+    api group: 'com.zaxxer', name: 'HikariCP'
+    api group: 'mysql', name: 'mysql-connector-java'
+}
+
+task mybatisGenerate {
+    def warnings = new ArrayList<String>()
+    def overwrite = true
+    def configurationFile = projectDir.getAbsolutePath() + '/src/main/resources/generatorConfiguration.xml'
+    def configFile = new File(configurationFile)
+    def cp = new ConfigurationParser(warnings)
+    def config = cp.parseConfiguration(configFile)
+    def callback = new DefaultShellCallback(overwrite)
+    def myBatisGenerator = new MyBatisGenerator(config, callback, warnings)
+    myBatisGenerator.generate(null)
+}
