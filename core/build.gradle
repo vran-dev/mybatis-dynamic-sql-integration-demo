@@ -1,0 +1,8 @@
+plugins {
+    id 'java-library'
+}
+
+group 'cc.cc1234.core'
+dependencies {
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web'
+}
