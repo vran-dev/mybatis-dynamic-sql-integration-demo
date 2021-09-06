@@ -8,25 +8,25 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class UserEntityDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120396+08:00", comments="Source Table: user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7663755+08:00", comments="Source Table: user")
     public static final UserEntity userEntity = new UserEntity();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120949+08:00", comments="Source field: user.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7673764+08:00", comments="Source field: user.id")
     public static final SqlColumn<Long> id = userEntity.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120949+08:00", comments="Source field: user.username")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7673764+08:00", comments="Source field: user.username")
     public static final SqlColumn<String> username = userEntity.username;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120949+08:00", comments="Source field: user.gender")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7673764+08:00", comments="Source field: user.gender")
     public static final SqlColumn<Gender> gender = userEntity.gender;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120949+08:00", comments="Source field: user.create_at")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7673764+08:00", comments="Source field: user.create_at")
     public static final SqlColumn<LocalDateTime> createAt = userEntity.createAt;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120949+08:00", comments="Source field: user.update_at")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7673764+08:00", comments="Source field: user.update_at")
     public static final SqlColumn<LocalDateTime> updateAt = userEntity.updateAt;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7120949+08:00", comments="Source Table: user")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7673764+08:00", comments="Source Table: user")
     public static final class UserEntity extends SqlTable {
         public final SqlColumn<Long> id = column("id", JDBCType.BIGINT);
 

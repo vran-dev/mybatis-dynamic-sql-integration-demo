@@ -1,19 +1,26 @@
-import org.mybatis.generator.api.MyBatisGenerator
-import org.mybatis.generator.config.xml.ConfigurationParser
-import org.mybatis.generator.internal.DefaultShellCallback
 
 buildscript {
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0'
-        classpath group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
     }
 }
 
 plugins {
     id 'java-library'
+    id "com.thinkimi.gradle.MybatisGenerator" version "2.3"
+}
+
+mybatisGenerator {
+    verbose = true
+    configFile = 'src/main/resources/generatorConfiguration.xml'
+
+    dependencies {
+        mybatisGenerator  group: 'org.mybatis.generator', name: 'mybatis-generator-core', version: '1.4.0'
+        mybatisGenerator group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
+        // you can add jdbc driver here
+    }
 }
 
 dependencies {
@@ -29,16 +36,4 @@ dependencies {
     // datasource
     api group: 'com.zaxxer', name: 'HikariCP'
     api group: 'mysql', name: 'mysql-connector-java'
-}
-
-task mybatisGenerate {
-    def warnings = new ArrayList<String>()
-    def overwrite = true
-    def configurationFile = projectDir.getAbsolutePath() + '/src/main/resources/generatorConfiguration.xml'
-    def configFile = new File(configurationFile)
-    def cp = new ConfigurationParser(warnings)
-    def config = cp.parseConfiguration(configFile)
-    def callback = new DefaultShellCallback(overwrite)
-    def myBatisGenerator = new MyBatisGenerator(config, callback, warnings)
-    myBatisGenerator.generate(null)
 }

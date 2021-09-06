@@ -7,34 +7,34 @@ import org.mybatis.dynamic.sql.SqlColumn;
 import org.mybatis.dynamic.sql.SqlTable;
 
 public final class OrderItemEntityDynamicSqlSupport {
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7137156+08:00", comments="Source Table: order_item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source Table: order_item")
     public static final OrderItemEntity orderItemEntity = new OrderItemEntity();
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142247+08:00", comments="Source field: order_item.id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.id")
     public static final SqlColumn<Long> id = orderItemEntity.id;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142247+08:00", comments="Source field: order_item.order_no")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.order_no")
     public static final SqlColumn<String> orderNo = orderItemEntity.orderNo;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142247+08:00", comments="Source field: order_item.order_id")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.order_id")
     public static final SqlColumn<Long> orderId = orderItemEntity.orderId;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142534+08:00", comments="Source field: order_item.goods_name")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.goods_name")
     public static final SqlColumn<String> goodsName = orderItemEntity.goodsName;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142534+08:00", comments="Source field: order_item.goods_quantity")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.goods_quantity")
     public static final SqlColumn<Integer> goodsQuantity = orderItemEntity.goodsQuantity;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142534+08:00", comments="Source field: order_item.goods_price")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.goods_price")
     public static final SqlColumn<Integer> goodsPrice = orderItemEntity.goodsPrice;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142534+08:00", comments="Source field: order_item.create_at")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.create_at")
     public static final SqlColumn<LocalDateTime> createAt = orderItemEntity.createAt;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7142534+08:00", comments="Source field: order_item.update_at")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source field: order_item.update_at")
     public static final SqlColumn<LocalDateTime> updateAt = orderItemEntity.updateAt;
 
-    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-08-29T21:59:12.7137156+08:00", comments="Source Table: order_item")
+    @Generated(value="org.mybatis.generator.api.MyBatisGenerator", date="2021-09-06T19:34:49.7703758+08:00", comments="Source Table: order_item")
     public static final class OrderItemEntity extends SqlTable {
         public final SqlColumn<Long> id = column("id", JDBCType.BIGINT);
 
